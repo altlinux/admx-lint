@@ -17,6 +17,8 @@ BuildRequires: gcc-c++
 BuildRequires: doxygen
 BuildRequires: libxerces-c-devel
 BuildRequires: xsd
+BuildRequires: boost-devel
+BuildRequires: boost-program_options-devel
 
 Source0: %name-%version.tar
 
