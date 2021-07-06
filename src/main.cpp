@@ -43,11 +43,12 @@ int main(int argc, char ** argv)
         using namespace boost::program_options;
         options_description options("input (required)");
         options.add_options()
-                ("input_file", value<std::string>(&input_file_path)->required(), "file in ADMX/ADML format.");
+                ("input_file", value<std::string>(&input_file_path)->required(), "file in ADMX/ADML format.")
+                ("help", "help information")
+                ("version", "version information");
 
         variables_map vm;
-        store(parse_command_line(argc, argv, options), vm);
-        notify(vm);
+        store(parse_command_line(argc, argv, options), vm);        
 
         if (argc == 1 || vm.count("help"))
         {
@@ -61,6 +62,7 @@ int main(int argc, char ** argv)
             return STATUS_OK;
         }
 
+        notify(vm);
     }
     catch (const std::exception& e)
     {
