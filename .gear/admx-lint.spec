@@ -41,5 +41,5 @@ Is a file verification tool, that checks ADMX/ADML contents against their XSD sc
 %_bindir/admx-lint
 
 %changelog
-* Tue Jul 06 2021 Vladimir Rubanov <august@altlinux.org> 0.1.0-alt1
+* Tue Jul 06 2021 Evgeny Sinelnikov <sin@altlinux.org> 0.1.0-alt1
 - Initial build
